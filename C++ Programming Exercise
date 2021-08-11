@@ -1,0 +1,34 @@
+//Question:
+/*given a array, even index will add, odd index will substract, return the total.
+ex: array[] = [1,2,3]
+1-2+3 = 2*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int arr[]={1,2,3};
+int n; 
+int sum=0;
+int odd=0; 
+int even=0;
+    
+int main(){
+    
+    for(n=0; n<3; n++) {
+        if (n%2 ==0) {
+            even=even+arr[n];
+            cout<<"At "<<n<<", the total even is "<< even<< "\n";
+        }
+        else if(n%2 ==1){ 
+            odd=-(odd+arr[n]);
+            cout<<"At "<<n<<", the total odd is "<< odd<< "\n";
+        }
+
+    }
+            
+        sum=even+odd;
+        
+        cout<<"The total is "<< sum<< "\n";
+}
+        
